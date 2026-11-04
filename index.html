@@ -13,7 +13,7 @@
 import{createClient}from'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
 // CONFIGURAÇÃO PÚBLICA: substitua SOMENTE a chave abaixo pela anon/publishable do projeto Caixas.
 const SUPABASE_URL='https://mdtspahnhligfxnsmxbt.supabase.co';
-const SUPABASE_KEY='COLE_AQUI_SUA_CHAVE_PUBLICA_SUPABASE';
+const SUPABASE_KEY='sb_publishable_2QgYinGdXY1vNwTBuacbjw_EKc6hswb';
 const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const db=createClient(SUPABASE_URL,SUPABASE_KEY,{auth:{persistSession:true,autoRefreshToken:true}});let destinos=[],movimentos=[];const token=new URLSearchParams(location.search).get('t');const hoje=()=>new Date(Date.now()-new Date().getTimezoneOffset()*60000).toISOString().slice(0,10);document.querySelectorAll('input[type=date]').forEach(x=>x.value=hoje());
 function msg(id,s){$(id).textContent=s;$(id).classList.remove('hide')}
